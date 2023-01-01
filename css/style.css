@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  width: min(80%, 90rem);
+  margin-inline: auto;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-container .navbar .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.07rem;
+}
+.navigation-container .navbar .nav-menu li {
+  padding: 2.5rem 1.2rem;
+  list-style-type: none;
+}
+.navigation-container .navbar .nav-menu li a {
+  text-decoration: none;
+  color: hsl(229deg, 31%, 21%);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.navigation-container .navbar .nav-menu .login-btn {
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.7rem 1.8rem;
+  margin-left: 0.8rem;
+  background: hsl(0deg, 94%, 66%);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.section-1 {
+  padding: 1rem 0;
+  min-height: 100vh;
+}
+.section-1 .main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.section-1 .main-content .column-1 {
+  width: 50%;
+}
+.section-1 .main-content .column-1 .hero-img {
+  width: 100%;
+}
+.section-1 .main-content .img-content {
+  position: relative;
+}
+.section-1 .main-content .img-content::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url(/bookmark-landing-page-master/images/bg-dots.svg);
+  background-position: center;
+  background-repeat: no;
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */
