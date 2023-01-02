@@ -186,7 +186,21 @@
 }
 /* Section 4 */
 .section-4 {
-  min-height: 20vh;
-  padding: 1rem 0;
+  min-height: 30vh;
+  padding: 2rem 0;
   @include flexboxCenter;
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+  }
+  .download-container {
+    width: 60%;
+    margin-inline: auto;
+    .paragraph {
+      text-align: center;
+      color: $grayishBlue;
+      line-height: 1.7rem;
+    }
+  }
 }

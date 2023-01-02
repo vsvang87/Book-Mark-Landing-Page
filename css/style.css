@@ -216,9 +216,23 @@ body {
 
 /* Section 4 */
 .section-4 {
-  min-height: 20vh;
-  padding: 1rem 0;
+  min-height: 30vh;
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.section-4 .title {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.section-4 .download-container {
+  width: 60%;
+  margin-inline: auto;
+}
+.section-4 .download-container .paragraph {
+  text-align: center;
+  color: hsl(229deg, 8%, 60%);
+  line-height: 1.7rem;
 }/*# sourceMappingURL=style.css.map */
