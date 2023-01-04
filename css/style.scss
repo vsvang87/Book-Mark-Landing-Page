@@ -186,8 +186,8 @@
 }
 /* Section 4 */
 .section-4 {
-  min-height: 30vh;
-  padding: 2rem 0;
+  min-height: 20vh;
+  padding-top: 2rem;
   @include flexboxCenter;
   .title {
     font-size: 2rem;
@@ -201,6 +201,110 @@
       text-align: center;
       color: $grayishBlue;
       line-height: 1.7rem;
+    }
+  }
+}
+/* Section 5 */
+.section-5 {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .browser-container {
+    width: 90%;
+    height: 60vh;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .column {
+      text-align: center;
+      height: 60vh;
+      width: 33%;
+      .align-top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 40vh;
+        width: 100%;
+        .top {
+          box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
+          width: 100%;
+          padding: 2rem 0 0.5rem 0;
+          p {
+            padding-top: 1rem;
+          }
+          .button-div {
+            margin: 2rem 0 1rem 0;
+
+            .add-btn {
+              padding: 0.5rem 1rem;
+              border: none;
+              background: $softBlue;
+              color: #fff;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .align-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 40vh;
+        .center {
+          box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
+          width: 100%;
+          padding: 2rem 0 0.5rem 0;
+          p {
+            padding-top: 1rem;
+          }
+          .button-div {
+            margin: 2rem 0 1rem 0;
+
+            .add-btn {
+              padding: 0.5rem 1rem;
+              border: none;
+              background: $softBlue;
+              color: #fff;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .align-bottom {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        height: 40vh;
+        .bottom {
+          box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
+          width: 100%;
+          padding: 2rem 0 0.5rem 0;
+          p {
+            padding-top: 1rem;
+          }
+          .button-div {
+            margin: 2rem 0 1rem 0;
+
+            .add-btn {
+              padding: 0.5rem 1rem;
+              border: none;
+              background: $softBlue;
+              color: #fff;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
   }
 }

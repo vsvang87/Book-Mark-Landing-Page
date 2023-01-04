@@ -216,8 +216,8 @@ body {
 
 /* Section 4 */
 .section-4 {
-  min-height: 30vh;
-  padding: 2rem 0;
+  min-height: 20vh;
+  padding-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,4 +235,105 @@ body {
   text-align: center;
   color: hsl(229deg, 8%, 60%);
   line-height: 1.7rem;
+}
+
+/* Section 5 */
+.section-5 {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.section-5 .browser-container {
+  width: 90%;
+  height: 60vh;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.section-5 .browser-container .column {
+  text-align: center;
+  height: 60vh;
+  width: 33%;
+}
+.section-5 .browser-container .column .align-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+  width: 100%;
+}
+.section-5 .browser-container .column .align-top .top {
+  box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
+  width: 100%;
+  padding: 2rem 0 0.5rem 0;
+}
+.section-5 .browser-container .column .align-top .top p {
+  padding-top: 1rem;
+}
+.section-5 .browser-container .column .align-top .top .button-div {
+  margin: 2rem 0 1rem 0;
+}
+.section-5 .browser-container .column .align-top .top .button-div .add-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: hsl(231deg, 69%, 60%);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section-5 .browser-container .column .align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+}
+.section-5 .browser-container .column .align-center .center {
+  box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
+  width: 100%;
+  padding: 2rem 0 0.5rem 0;
+}
+.section-5 .browser-container .column .align-center .center p {
+  padding-top: 1rem;
+}
+.section-5 .browser-container .column .align-center .center .button-div {
+  margin: 2rem 0 1rem 0;
+}
+.section-5 .browser-container .column .align-center .center .button-div .add-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: hsl(231deg, 69%, 60%);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section-5 .browser-container .column .align-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+}
+.section-5 .browser-container .column .align-bottom .bottom {
+  box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
+  width: 100%;
+  padding: 2rem 0 0.5rem 0;
+}
+.section-5 .browser-container .column .align-bottom .bottom p {
+  padding-top: 1rem;
+}
+.section-5 .browser-container .column .align-bottom .bottom .button-div {
+  margin: 2rem 0 1rem 0;
+}
+.section-5 .browser-container .column .align-bottom .bottom .button-div .add-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: hsl(231deg, 69%, 60%);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
