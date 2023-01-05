@@ -16,4 +16,10 @@ body {
 .container {
   width: min(80%, 90rem);
   margin-inline: auto;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
 }/*# sourceMappingURL=variables.css.map */

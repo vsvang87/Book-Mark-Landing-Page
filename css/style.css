@@ -18,6 +18,13 @@ body {
   margin-inline: auto;
 }
 
+.title {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+/*---------- Navbar Start--------------------------*/
 .navigation-container {
   display: flex;
   justify-content: space-between;
@@ -39,6 +46,10 @@ body {
   color: hsl(229deg, 31%, 21%);
   font-size: 0.8rem;
   font-weight: 600;
+  transition: 0.2s ease;
+}
+.navigation-container .navbar .nav-menu li a:hover {
+  color: hsl(0deg, 94%, 66%);
 }
 .navigation-container .navbar .nav-menu .login-btn {
   text-decoration: none;
@@ -48,8 +59,16 @@ body {
   background: hsl(0deg, 94%, 66%);
   border-radius: 5px;
   color: #fff;
+  transition: 0.2s ease;
+}
+.navigation-container .navbar .nav-menu .login-btn:hover {
+  background: #fff;
+  border: 2px solid hsl(0deg, 94%, 66%);
+  color: hsl(0deg, 94%, 66%);
 }
 
+/*---------------- Navbar End -------------------------------*/
+/*---------------- Main section ------------------------------*/
 .section-1 {
   padding: 1rem 0;
   min-height: 60vh;
@@ -67,6 +86,7 @@ body {
   font-size: 3rem;
   font-weight: 500;
   padding-bottom: 1.5rem;
+  text-align: left;
 }
 .section-1 .main-content .para-content .paragraph {
   color: hsl(229deg, 8%, 60%);
@@ -85,9 +105,20 @@ body {
   background: hsl(231deg, 69%, 60%);
   margin-right: 0.5rem;
   color: #fff;
+  transition: 0.2s ease;
+}
+.section-1 .main-content .para-content .color-blue:hover {
+  background: #fff;
+  color: hsl(231deg, 69%, 60%);
+  border: 2px solid hsl(231deg, 69%, 60%);
 }
 .section-1 .main-content .para-content .color-gray {
   color: hsl(229deg, 31%, 21%);
+  transition: 0.2s ease;
+}
+.section-1 .main-content .para-content .color-gray:hover {
+  background: #fff;
+  border: 2px solid hsl(229deg, 31%, 21%);
 }
 .section-1 .main-content .column-1 {
   width: 50%;
@@ -110,7 +141,7 @@ body {
   border-radius: 45% 0 0 45%;
 }
 
-/* Section 2 */
+/*-------------- Section 2, Features ------------------- */
 .section-2 {
   min-height: 25vh;
   padding: 2rem 0;
@@ -118,10 +149,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.section-2 .title {
-  font-size: 2rem;
-  padding-bottom: 1.5rem;
 }
 .section-2 .features-container {
   width: 60%;
@@ -141,13 +168,12 @@ body {
   text-decoration: none;
   color: hsl(229deg, 8%, 60%);
   padding-bottom: 2rem;
-  transform: scaleX(0);
-  transform-origin: left;
+  transition: 0.1s ease-in-out;
 }
 .section-2 .three-options-container a:hover {
-  border-bottom: 4px solid hsl(0deg, 94%, 66%);
-  transform: scaleX(1);
-  transform-origin: left;
+  padding-bottom: 2rem;
+  color: hsl(0deg, 94%, 66%);
+  border-bottom: 3px solid hsl(0deg, 94%, 66%);
 }
 .section-2 .three-options-container::after {
   content: "";
@@ -158,7 +184,8 @@ body {
   margin-top: 2rem;
 }
 
-/* Section 3 */
+/*------------------ End Section 2 ------------------------------*/
+/*------------------- Section 3, Bookmark on click --------------- */
 .section-3 {
   min-height: 60vh;
   padding: 1rem 0;
@@ -195,10 +222,6 @@ body {
   width: 50%;
   padding-left: 5rem;
 }
-.section-3 .bookmark-container .bookmark-click .title {
-  font-size: 2rem;
-  padding-bottom: 1.5rem;
-}
 .section-3 .bookmark-container .bookmark-click .paragraph {
   padding-bottom: 1.5rem;
   color: hsl(229deg, 8%, 60%);
@@ -214,18 +237,13 @@ body {
   color: #fff;
 }
 
-/* Section 4 */
+/*------------- Section 4, Add Extension ------------------------ */
 .section-4 {
   min-height: 20vh;
   padding-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.section-4 .title {
-  font-size: 2rem;
-  text-align: center;
-  padding-bottom: 1.5rem;
 }
 .section-4 .download-container {
   width: 60%;
@@ -237,9 +255,9 @@ body {
   line-height: 1.7rem;
 }
 
-/* Section 5 */
+/*----------------- Section 5, Add Chrome, Firefox, Opera----------------*/
 .section-5 {
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -251,7 +269,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  /*--------------Targeting all 3 Chrome, Firefox, Opera---------------*/
 }
 .section-5 .browser-container .column {
   text-align: center;
@@ -263,16 +281,18 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  height: 40vh;
+  height: 50vh;
   width: 100%;
 }
 .section-5 .browser-container .column .align-top .top {
   box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
-  width: 100%;
+  border-radius: 8px;
+  width: 80%;
   padding: 2rem 0 0.5rem 0;
 }
 .section-5 .browser-container .column .align-top .top p {
-  padding-top: 1rem;
+  padding-top: 2rem;
+  font-weight: 550;
 }
 .section-5 .browser-container .column .align-top .top .button-div {
   margin: 2rem 0 1rem 0;
@@ -284,21 +304,24 @@ body {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
 }
 .section-5 .browser-container .column .align-center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 40vh;
+  height: 50vh;
 }
 .section-5 .browser-container .column .align-center .center {
   box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
-  width: 100%;
+  border-radius: 8px;
+  width: 80%;
   padding: 2rem 0 0.5rem 0;
 }
 .section-5 .browser-container .column .align-center .center p {
-  padding-top: 1rem;
+  padding-top: 2rem;
+  font-weight: 550;
 }
 .section-5 .browser-container .column .align-center .center .button-div {
   margin: 2rem 0 1rem 0;
@@ -310,21 +333,24 @@ body {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
 }
 .section-5 .browser-container .column .align-bottom {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  height: 40vh;
+  height: 50vh;
 }
 .section-5 .browser-container .column .align-bottom .bottom {
   box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
-  width: 100%;
+  border-radius: 8px;
+  width: 80%;
   padding: 2rem 0 0.5rem 0;
 }
 .section-5 .browser-container .column .align-bottom .bottom p {
-  padding-top: 1rem;
+  padding-top: 2rem;
+  font-weight: 550;
 }
 .section-5 .browser-container .column .align-bottom .bottom .button-div {
   margin: 2rem 0 1rem 0;
@@ -336,4 +362,44 @@ body {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(83, 104, 223, 0.3);
+}
+
+/*-------------- Section 6, Frequently asked questions ------------*/
+.section-6 {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-6 .asked-question-container {
+  width: 60%;
+  margin-inline: auto;
+}
+.section-6 .asked-question-container .accordian-container .accordian {
+  position: relative;
+}
+.section-6 .asked-question-container .accordian-container .accordian .bold-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+}
+.section-6 .asked-question-container .accordian-container .accordian::before {
+  content: "";
+  display: block;
+  background: hsl(229deg, 8%, 60%);
+  width: 100%;
+  height: 1px;
+}
+.section-6 .asked-question-container .accordian-container::after {
+  content: "";
+  display: block;
+  background: hsl(229deg, 8%, 60%);
+  width: 100%;
+  height: 1px;
+}
+
+footer {
+  min-height: 30vh;
+  background: hsl(231deg, 69%, 60%);
 }/*# sourceMappingURL=style.css.map */

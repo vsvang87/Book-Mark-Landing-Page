@@ -1,6 +1,7 @@
 @import "mixin";
 @import "variables";
 
+/*---------- Navbar Start--------------------------*/
 .navigation-container {
   @include flexboxSpaceBetween;
   height: 14vh;
@@ -16,6 +17,10 @@
           color: $veryDarkBlue;
           font-size: 0.8rem;
           font-weight: 600;
+          transition: 0.2s ease;
+          &:hover {
+            color: $softRed;
+          }
         }
       }
       .login-btn {
@@ -26,10 +31,18 @@
         background: $softRed;
         border-radius: 5px;
         color: #fff;
+        transition: 0.2s ease;
+        &:hover {
+          background: #fff;
+          border: 2px solid $softRed;
+          color: $softRed;
+        }
       }
     }
   }
 }
+/*---------------- Navbar End -------------------------------*/
+/*---------------- Main section ------------------------------*/
 .section-1 {
   padding: 1rem 0;
   min-height: 60vh;
@@ -42,6 +55,7 @@
         font-size: 3rem;
         font-weight: 500;
         padding-bottom: 1.5rem;
+        text-align: left;
       }
       .paragraph {
         color: $grayishBlue;
@@ -60,9 +74,20 @@
         background: $softBlue;
         margin-right: 0.5rem;
         color: #fff;
+        transition: 0.2s ease;
+        &:hover {
+          background: #fff;
+          color: $softBlue;
+          border: 2px solid $softBlue;
+        }
       }
       .color-gray {
         color: $veryDarkBlue;
+        transition: 0.2s ease;
+        &:hover {
+          background: #fff;
+          border: 2px solid $veryDarkBlue;
+        }
       }
     }
     .column-1 {
@@ -87,16 +112,13 @@
     }
   }
 }
-/* Section 2 */
+/*-------------- Section 2, Features ------------------- */
 .section-2 {
   min-height: 25vh;
   padding: 2rem 0;
   text-align: center;
   @include flexboxCenter;
-  .title {
-    font-size: 2rem;
-    padding-bottom: 1.5rem;
-  }
+
   .features-container {
     width: 60%;
     margin-inline: auto;
@@ -114,13 +136,11 @@
       text-decoration: none;
       color: $grayishBlue;
       padding-bottom: 2rem;
-      transform: scaleX(0);
-      transform-origin: left;
+      transition: 0.1s ease-in-out;
       &:hover {
-        border-bottom: 4px solid $softRed;
-
-        transform: scaleX(1);
-        transform-origin: left;
+        padding-bottom: 2rem;
+        color: $softRed;
+        border-bottom: 3px solid $softRed;
       }
     }
   }
@@ -133,7 +153,8 @@
     margin-top: 2rem;
   }
 }
-/* Section 3 */
+/*------------------ End Section 2 ------------------------------*/
+/*------------------- Section 3, Bookmark on click --------------- */
 .section-3 {
   min-height: 60vh;
   padding: 1rem 0;
@@ -163,10 +184,7 @@
     .bookmark-click {
       width: 50%;
       padding-left: 5rem;
-      .title {
-        font-size: 2rem;
-        padding-bottom: 1.5rem;
-      }
+
       .paragraph {
         padding-bottom: 1.5rem;
         color: $grayishBlue;
@@ -184,16 +202,11 @@
     }
   }
 }
-/* Section 4 */
+/*------------- Section 4, Add Extension ------------------------ */
 .section-4 {
   min-height: 20vh;
   padding-top: 2rem;
   @include flexboxCenter;
-  .title {
-    font-size: 2rem;
-    text-align: center;
-    padding-bottom: 1.5rem;
-  }
   .download-container {
     width: 60%;
     margin-inline: auto;
@@ -204,9 +217,9 @@
     }
   }
 }
-/* Section 5 */
+/*----------------- Section 5, Add Chrome, Firefox, Opera----------------*/
 .section-5 {
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -218,7 +231,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    /*--------------Targeting all 3 Chrome, Firefox, Opera---------------*/
     .column {
       text-align: center;
       height: 60vh;
@@ -228,14 +241,16 @@
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        height: 40vh;
+        height: 50vh;
         width: 100%;
         .top {
           box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
-          width: 100%;
+          border-radius: 8px;
+          width: 80%;
           padding: 2rem 0 0.5rem 0;
           p {
-            padding-top: 1rem;
+            padding-top: 2rem;
+            font-weight: 550;
           }
           .button-div {
             margin: 2rem 0 1rem 0;
@@ -247,6 +262,7 @@
               color: #fff;
               border-radius: 5px;
               cursor: pointer;
+              box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
             }
           }
         }
@@ -256,13 +272,15 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 40vh;
+        height: 50vh;
         .center {
           box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
-          width: 100%;
+          border-radius: 8px;
+          width: 80%;
           padding: 2rem 0 0.5rem 0;
           p {
-            padding-top: 1rem;
+            padding-top: 2rem;
+            font-weight: 550;
           }
           .button-div {
             margin: 2rem 0 1rem 0;
@@ -274,6 +292,7 @@
               color: #fff;
               border-radius: 5px;
               cursor: pointer;
+              box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
             }
           }
         }
@@ -283,13 +302,15 @@
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
-        height: 40vh;
+        height: 50vh;
         .bottom {
           box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
-          width: 100%;
+          border-radius: 8px;
+          width: 80%;
           padding: 2rem 0 0.5rem 0;
           p {
-            padding-top: 1rem;
+            padding-top: 2rem;
+            font-weight: 550;
           }
           .button-div {
             margin: 2rem 0 1rem 0;
@@ -301,10 +322,48 @@
               color: #fff;
               border-radius: 5px;
               cursor: pointer;
+              box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
             }
           }
         }
       }
     }
   }
+}
+/*-------------- Section 6, Frequently asked questions ------------*/
+.section-6 {
+  min-height: 30vh;
+  @include flexboxCenter;
+  .asked-question-container {
+    width: 60%;
+    margin-inline: auto;
+    .accordian-container {
+      .accordian {
+        position: relative;
+        .bold-text::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+        }
+      }
+      .accordian::before {
+        content: "";
+        display: block;
+        background: $grayishBlue;
+        width: 100%;
+        height: 1px;
+      }
+    }
+    .accordian-container::after {
+      content: "";
+      display: block;
+      background: $grayishBlue;
+      width: 100%;
+      height: 1px;
+    }
+  }
+}
+footer {
+  min-height: 30vh;
+  background: $softBlue;
 }
