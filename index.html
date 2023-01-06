@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Bookmark Landing Page</title>
   </head>
@@ -86,7 +95,7 @@
               />
             </div>
             <div class="bookmark-click sect3-col">
-              <p class="title">Bookmark in one click</p>
+              <p class="title-bookmark">Bookmark in one click</p>
               <p class="paragraph">
                 Organize your bookmarks however you like. Our simple
                 drag-and-dro interface gives you complete control over how you
@@ -175,7 +184,11 @@
             </p>
             <div class="accordian-container">
               <div class="accordian">
-                <p class="bold-text">What is Bookmark?</p>
+                <label for="bookmark"
+                  >What is Bookmark?<span
+                    ><i class="fa-solid fa-chevron-down"></i></span
+                ></label>
+                <input type="radio" id="bookmark" name="accordion" checked />
                 <div class="content">
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -186,7 +199,11 @@
                 </div>
               </div>
               <div class="accordian">
-                <p class="bold-text">What is Bookmark?</p>
+                <label for="browser"
+                  >How can I request a new browser?<span
+                    ><i class="fa-solid fa-chevron-down"></i></span
+                ></label>
+                <input type="radio" id="browser" name="accordion" checked />
                 <div class="content">
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -197,7 +214,11 @@
                 </div>
               </div>
               <div class="accordian">
-                <p class="bold-text">What is Bookmark?</p>
+                <label for="mobile"
+                  >Is there a mobile app?<span
+                    ><i class="fa-solid fa-chevron-down"></i></span
+                ></label>
+                <input type="radio" id="mobile" name="accordion" checked />
                 <div class="content">
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -208,7 +229,11 @@
                 </div>
               </div>
               <div class="accordian">
-                <p class="bold-text">What is Bookmark?</p>
+                <label for="chrome">
+                  What about other Chromium browsers?
+                  <span><i class="fa-solid fa-chevron-down"></i></span>
+                </label>
+                <input type="radio" id="chrome" name="accordion" checked />
                 <div class="content">
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -219,9 +244,23 @@
                 </div>
               </div>
             </div>
-            <div class="button">
+            <div class="button-div">
               <button class="btn">More Info</button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-7">
+        <div class="container">
+          <div class="inner-content">
+            <p>35,000+ ALREADY JOINED</p>
+            <p class="large-text">Stay up-to-date with what we're doing</p>
+          </div>
+          <div class="form">
+            <form action="" id="form">
+              <input type="text" placeholder="Enter your email address" />
+              <button>Contact Us</button>
+            </form>
           </div>
         </div>
       </section>
@@ -230,14 +269,25 @@
     <footer>
       <div class="container">
         <div class="footer-content">
-          <p>35,000+ ALREADY JOINED</p>
-          <p class="large-text">Stay up-to-date with what we're doing</p>
-        </div>
-        <div class="form">
-          <form action="">
-            <input type="text" placeholder="Enter your email address" />
-            <button>Contact Us</button>
-          </form>
+          <div class="logo">
+            <a href="#">
+              <img
+                src="/bookmark-landing-page-master/images/logo-bookmark.svg"
+                alt=""
+              />
+            </a>
+            <a href="#">FEATURES</a>
+            <a href="#">PRICING</a>
+            <a href="#">CONTACT</a>
+          </div>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
