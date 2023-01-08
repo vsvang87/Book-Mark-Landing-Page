@@ -8,3 +8,18 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin mediaQuery950() {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
+@mixin mediaQuery830() {
+  @media (max-width: 830px) {
+    @content;
+  }
+}
+@mixin mediaQuery550() {
+  @media (max-width: 550px) {
+    @content;
+  }
+}

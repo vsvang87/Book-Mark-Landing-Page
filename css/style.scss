@@ -6,6 +6,9 @@
   @include flexboxSpaceBetween;
   height: 14vh;
   .navbar {
+    @include mediaQuery950() {
+      display: none;
+    }
     .nav-menu {
       @include flexboxSpaceBetween;
       letter-spacing: 0.07rem;
@@ -40,6 +43,17 @@
       }
     }
   }
+  /*--------Hamburger Menu---------------------*/
+  .hamburger-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    @include mediaQuery950() {
+      display: block;
+    }
+  }
+  /*---------End Hamburger Menu----------------*/
 }
 /*---------------- Navbar End -------------------------------*/
 /*---------------- Main section ------------------------------*/
@@ -48,14 +62,25 @@
   min-height: 60vh;
   @include flexboxCenter;
   .main-content {
-    @include flexboxSpaceBetween;
     gap: 1rem;
+    @include flexboxSpaceBetween;
+    @include mediaQuery950() {
+      flex-wrap: wrap-reverse;
+      gap: 5rem;
+    }
+
     .para-content {
       .title {
         font-size: 3rem;
         font-weight: 500;
         padding-bottom: 1.5rem;
         text-align: left;
+        @include mediaQuery950() {
+          text-align: center;
+        }
+        @include mediaQuery550() {
+          font-size: 2rem;
+        }
       }
       .paragraph {
         color: $grayishBlue;
@@ -92,6 +117,10 @@
     }
     .column-1 {
       width: 50%;
+      @include mediaQuery950() {
+        width: 100%;
+        text-align: center;
+      }
       .hero-img {
         width: 100%;
       }
@@ -131,12 +160,19 @@
   .three-options-container {
     width: 75%;
     margin-inline: auto;
+    @include mediaQuery950() {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     a {
       margin: 0 2.5rem;
       text-decoration: none;
       color: $grayishBlue;
       padding-bottom: 2rem;
       transition: 0.1s ease-in-out;
+
       &:hover {
         padding-bottom: 2rem;
         color: $softRed;
@@ -162,9 +198,16 @@
   .bookmark-container {
     @include flexboxSpaceBetween;
     gap: 2rem;
+    @include mediaQuery950() {
+      flex-wrap: wrap;
+      gap: 8rem;
+    }
     .bookmark-img {
       position: relative;
       width: 50%;
+      @include mediaQuery950() {
+        width: 100%;
+      }
       img {
         width: 100%;
       }
@@ -184,6 +227,11 @@
     .bookmark-click {
       width: 50%;
       padding-left: 5rem;
+      @include mediaQuery950() {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+      }
       .title-bookmark {
         font-size: 2rem;
         padding-bottom: 1.5rem;
@@ -227,7 +275,12 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
+  @include mediaQuery950() {
+    min-height: 100vh;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 2.5rem 0;
+  }
   .browser-container {
     width: 90%;
     height: 60vh;
@@ -235,11 +288,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mediaQuery950() {
+      flex-direction: column;
+      gap: 2rem;
+      height: 100vh;
+    }
     /*--------------Targeting all 3 Chrome, Firefox, Opera---------------*/
     .column {
       text-align: center;
       height: 60vh;
       width: 33%;
+      @include mediaQuery950() {
+        width: 100%;
+      }
       .align-top {
         display: flex;
         justify-content: flex-start;
@@ -247,6 +308,10 @@
         flex-direction: column;
         height: 50vh;
         width: 100%;
+        @include mediaQuery950() {
+          justify-content: center;
+          height: fit-content;
+        }
         .top {
           box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
           border-radius: 8px;
@@ -277,6 +342,10 @@
         align-items: center;
         flex-direction: column;
         height: 50vh;
+        @include mediaQuery950() {
+          justify-content: center;
+          height: fit-content;
+        }
         .center {
           box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
           border-radius: 8px;
@@ -307,6 +376,10 @@
         align-items: center;
         flex-direction: column;
         height: 50vh;
+        @include mediaQuery950() {
+          justify-content: center;
+          height: fit-content;
+        }
         .bottom {
           box-shadow: 0 2px 5px 0 rgba($color: $softBlue, $alpha: 0.3);
           border-radius: 8px;
@@ -342,6 +415,9 @@
   .asked-question-container {
     width: 60%;
     margin-inline: auto;
+    @include mediaQuery950() {
+      width: 100%;
+    }
     .paragraph {
       padding: 1rem 0 2.5rem 0;
       color: $grayishBlue;
@@ -421,6 +497,9 @@
   .inner-content {
     width: 40%;
     margin-inline: auto;
+    @include mediaQuery950() {
+      width: 100%;
+    }
     p {
       color: #fff;
       padding: 1rem 0;
@@ -430,14 +509,24 @@
       font-size: 1.8rem;
     }
   }
-  .form {
+  form {
     text-align: center;
+    @include mediaQuery550() {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     input {
       outline: none;
       padding: 1rem;
       width: 30%;
       border-radius: 5px;
       border: none;
+      @include mediaQuery550() {
+        width: 91.6%;
+        margin-bottom: 1.5rem;
+      }
     }
     button {
       border: none;
@@ -447,6 +536,10 @@
       border-radius: 5px;
       color: #fff;
       margin-left: 0.5rem;
+      @include mediaQuery550() {
+        width: 100%;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -454,14 +547,29 @@ footer {
   min-height: 10vh;
   background: $veryDarkBlue;
   @include flexboxCenter;
+  @include mediaQuery830() {
+    min-height: 40vh;
+  }
   .footer-content {
     @include flexboxSpaceBetween;
-    .logo {
+    @include mediaQuery830() {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .link-div {
+      @include flexboxCenter;
+      @include mediaQuery830() {
+        flex-direction: column;
+      }
       a {
         text-decoration: none;
         color: #fff;
         font-size: 0.8rem;
         padding: 0 1rem;
+        @include mediaQuery830() {
+          font-size: 1.2rem;
+          padding: 1rem 0;
+        }
       }
     }
     .social-icons {
@@ -469,6 +577,9 @@ footer {
         text-decoration: none;
         color: #fff;
         padding: 0 1rem;
+        @include mediaQuery830() {
+          font-size: 1.2rem;
+        }
       }
     }
   }
