@@ -266,6 +266,7 @@
       text-align: center;
       color: $grayishBlue;
       line-height: 1.7rem;
+      padding-bottom: 2rem;
     }
   }
 }
@@ -412,12 +413,18 @@
   min-height: 50vh;
   padding-bottom: 5rem;
   @include flexboxCenter;
+  .question-title {
+    padding: 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+  }
   .asked-question-container {
     width: 60%;
     margin-inline: auto;
     @include mediaQuery950() {
       width: 100%;
     }
+
     .paragraph {
       padding: 1rem 0 2.5rem 0;
       color: $grayishBlue;
@@ -491,6 +498,7 @@
 }
 /*---------Section 7------------------*/
 .section-7 {
+  padding: 2rem 0;
   min-height: 35vh;
   background: $softBlue;
   @include flexboxCenter;
